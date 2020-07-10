@@ -3,7 +3,7 @@
 
 EmotionalAI is a machine learning model that classifies the given text to positive and negative sentiment.
 
-<img src="src/static/img/sentiment.png?raw=true" width="600">
+<img src="src/static/img/sentiment.png?raw=true" width="1000">
 
 ### How to Run:
 1. Install necessary modules with `sudo pip3 install -r requirements.txt` command.
