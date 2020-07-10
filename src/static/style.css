@@ -86,7 +86,6 @@ html,body{
 }
 
 .navbar {
-  /* position: fixed; */
   width: 100%;
   top: 0;
   padding: .8rem;
@@ -107,10 +106,6 @@ html,body{
 .navbar-nav li {
   list-style: none;
   margin: 0 20px;
-  /* padding-right: 20px;
-  margin-top: 0;
-  margin-bottom: 0; */
-  /* transition: 0.5s; */
 }
 
 
@@ -131,12 +126,6 @@ html,body{
   filter: blur(5px);
   color: rgb(255, 255, 255);
 }
-/* .navbar-nav li a:hover {
-  transform: scale(1.2);
-  opacity: 1;
-  filter: blur();
-  color: rgb(10, 3, 54);
-} */
 
 .navbar .navbar-nav li .nav-link {
   color:#c7e932
@@ -177,10 +166,6 @@ html,body{
   color:#fbffff;
 }
 
-/* .nav-link {
-  font-size: 1.1em !important;
-} */
-
 .products img{
   height: 130px;
   width: 130px;
@@ -213,12 +198,8 @@ html,body{
 .container {
   position: relative;
   transition: all .2s ease-in-out;
-  /* margin: 9rem; */
   display: flex;
   justify-content: center;
-  /* transform: translateX(20%); */
-  /* padding-left: 10em; */
-
 }
 
 .change {
@@ -282,15 +263,12 @@ html,body{
   display: flex;
   justify-content: center; 
   margin-top: 420px;
-  /* color: rgb(8, 36, 3); */
   vertical-align: middle;
   letter-spacing: 1px;
   color: #343148ff;
   font-size: 1.5rem;
   transition: ease-in-out;
   font-weight: 500;
-  /* margin-top: 400px; */
-  /* margin-left: 100px; */
   opacity: 1;
   font-size: 20px;
   visibility: visible;
@@ -303,10 +281,7 @@ html,body{
   font-size: 0px;
   letter-spacing: 2px;
   margin-right: 10px;
-  /* visibility: hidden; */
-  /* opacity: 0; */
   transform: rotate(180deg);
-  /* transform-origin: 20% 20% 5; */
   transition: 0.5s;
   display: none;
 
@@ -359,13 +334,6 @@ html,body{
   box-shadow: 0 0 10px #0c2731;
   transition-property: none;
 }
-/* {
-.container .card .contentbx a{
-  color: rgb(134, 205, 224);
-  background: #343148ff;
-  transition-property: none;
-} */
-
 
 .container .card .contentbx h2 {
   position: relative;
@@ -420,28 +388,6 @@ html,body{
   filter: blur(20px);
   opacity: 0;
 }
-
-/* .carousel-caption .ghost-text ul h1 {
-  font-size: 0em;  
-  font-weight: 500;
-  opacity: 0;
-  visibility: hidden;
-  text-shadow: 1px 1px 10px #000;
-  padding-bottom: 1rem;
-}
-.carousel-caption .ghost-text ul:hover h1 {
-  margin-right: 7em;
-  margin-top: 5em;
-  padding: 0;
-  display: flex;
-  font-size: 2em;  
-  transition: 3s;
-  font-weight: 500;
-  opacity: 1;
-  visibility: visible;
-  text-shadow: 1px 1px 10px #000;
-  padding-bottom: 1rem;
-} */
 .carousel-caption h3 {
   margin-top: 4em;
   font-size: 200%;  
@@ -526,8 +472,6 @@ html,body{
 }
 
 .social ul li {
-  /* font-size: 3.5em;
-  padding: 3rem; */
   position: relative;
   list-style: none;
   width: 60px;
@@ -603,10 +547,6 @@ html,body{
   color:rgb(250, 250, 255)
 }
 
-/* .fa-facebook:hover, .fa-twitter:hover, .fa-youtube:hover, .fa-linkedin:hover {
-  color: #d5d5d5;
-} */
-
 .new {
   box-shadow: 0 0 10px #000;
 }
@@ -615,11 +555,6 @@ footer {
   color: #d5d5d5;
   padding-top: 2rem;
 }
-
-/* footer .foot {
-  top: 0;
-  left: 50%;
-} */
 
 .connect-bottom h2{
   letter-spacing: 1px;
@@ -763,32 +698,3 @@ figure {
 [class*="col-"] {
     padding: 1rem;
 }
-
-
-
-
-
-/*
-Extra small (xs) devices (portrait phones, less than 576px)
-No media query since this is the default in Bootstrap
-
-Small (sm) devices (landscape phones, 576px and up)
-@media (min-width: 576px) { ... }
-
-Medium (md) devices (tablets, 768px and up)
-@media (min-width: 768px) { ... }
-
-Large (lg) devices (desktops, 992px and up)
-@media (min-width: 992px) { ... }
-
-Extra (xl) large devices (large desktops, 1200px and up)
-@media (min-width: 1200px) { ... }
-*/
-
-
-
-
-
-
-
-
