@@ -15,5 +15,5 @@ EmotionalAI is a machine learning model that classifies the given text to positi
 
 ## Inside the model
 * Dataset is provided in the __*data*__ folder, which has been downloaded from [here](https://github.com/clairett/pytorch-sentiment-classification/raw/master/data/SST2/train.tsv)
-* The features are extracted using [Distilbert](https://huggingface.co/transformers/model_doc/distilbert.html) from huggingface which is a smaller distilledd version of bert.
+* The features are extracted using [Distilbert](https://huggingface.co/transformers/model_doc/distilbert.html) from huggingface which is a smaller distilled version of bert.
 * Machine Learning model used was SVM.
