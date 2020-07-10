@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+{% block title %}<title>Sentiment Classifier</title> {% endblock %}
+{% block style %} <link href="../static/style_sentiment.css" rel="stylesheet"> {% endblock %}
+
+<div class="carousel-inner active">
+    <div class="box">
+        <h1>Sentiment Classifier</h1>
+    </div>
+    <form method="POST">
+        <div class="input-field">
+            <div>    
+            <textarea id="query" placeholder="Please Enter the text.." name="text" cols="50" rows="10"></textarea>  
+            </div>
+        </div>
+        <div class="input-button">
+        <form >
+            <input type="submit" value="Get Results" id="results" class="btn-primary" >
+        </form>
+		</div>
+    </form>
+	<div class="hide-prediction">
+		<p id="res"></p>
+		<span></span>
+	</div>
+	<img src="../static/img/gif1.gif">
+</div>
+
+<script type=text/javascript>
+	$(function() {
+			$('#results').bind('click', function() {
+			$(".hide-prediction").removeClass('hide-prediction').addClass('show-prediction');	
+			$.getJSON('/background_process', {
+				textdata: $('textarea[name="text"]').val(),
+			}, function(data) {
+				$("#res").text(data.prediction);
+			});
+			return false;
+			});
+		});
+
+</script>
+
+{% endblock %}
