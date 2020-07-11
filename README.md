@@ -18,4 +18,4 @@ EmotionalAI is a machine learning model that classifies the given text to positi
 * The features are extracted using [Distilbert](https://huggingface.co/transformers/model_doc/distilbert.html) from huggingface which is a smaller distilled version of bert.
 * Machine Learning model used was SVM.
 
-Please Give a :star2: if you :+1: it.
+__Please Give a :star2: if you :+1: it.__
