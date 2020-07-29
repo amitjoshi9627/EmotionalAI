@@ -8,3 +8,4 @@ torch
 transformers
 numpy
 pandas
+streamlit
