@@ -1,9 +1,7 @@
 from torch.utils.data import Dataset
 import numpy as np
 import pandas as pd
-import os
 import config
-import torch
 
 
 class SentimentClassifierDataset(Dataset):

@@ -1,4 +1,3 @@
-from model import BertForFeatureExtraction
 from tqdm import tqdm
 from dataset import SentimentClassifierDataset
 from torch.utils.data import DataLoader
@@ -16,10 +15,12 @@ def get_features(model, train=True, text=None):
             dataset, batch_size=config.BATCH_SIZE, shuffle=False)
         labels = []
         features = []
+        device = torch.device('cuda') if torch.cuda.is_available() else torch.device('cpu') 
+        model.to(device)
         with torch.no_grad():
             for ind, d in tqdm(enumerate(train_dataloader), total=len(train_dataloader)):
-                input_ids = d['input_ids']
-                attention_mask = d['attention_mask']
+                input_ids = d['input_ids'].to(device).long()
+                attention_mask = d['attention_mask'].to(device).long()
                 label = np.array(d['label'])
                 labels.extend(label)
                 feature = model(input_ids, attention_mask)
@@ -29,13 +30,15 @@ def get_features(model, train=True, text=None):
         return np.array(features), np.array(labels)
 
     else:
+        device = torch.device('cuda') if torch.cuda.is_available() else torch.device('cpu') 
+        model.to(device)
         dataset = SentimentClassifierDataset(train=False, text=text)
         input_ids = [dataset.get_tokens(dataset.data)]
         attention_mask = dataset.get_attention_mask(np.array(input_ids[0]))
 
         with torch.no_grad():
-            input_ids = torch.tensor(input_ids)
-            attention_mask = torch.tensor(attention_mask)
+            input_ids = torch.tensor(input_ids).to(device).long()
+            attention_mask = torch.tensor(attention_mask).to(device).long()
             feature = model(input_ids, attention_mask)
 
         return np.array(feature)

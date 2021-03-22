@@ -1,9 +1,5 @@
-import torch
-import numpy as np
 from model import BertForFeatureExtraction
-from distilbert import BertForSentimentAnalysis
 import utils
-import os
 import engine
 import config
 

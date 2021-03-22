@@ -1,6 +1,5 @@
-from flask import Flask, redirect, url_for, render_template, request, jsonify
+from flask import Flask, render_template, request, jsonify
 from sentiment_classifier import get_prediction
-import time
 app = Flask(__name__)
 
 

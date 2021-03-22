@@ -1,6 +1,5 @@
 import config
 import utils
-import transformers
 from torch import nn
 import torch
 
@@ -14,4 +13,4 @@ class BertForFeatureExtraction(nn.Module):
         with torch.no_grad():
             output = self.bert(input_ids, attention_mask=attention_mask)
         last_hidden_state = output[0]
-        return last_hidden_state[:, 0, :].numpy()
+        return last_hidden_state[:, 0, :].cpu().numpy()
