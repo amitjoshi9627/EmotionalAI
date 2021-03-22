@@ -21,10 +21,17 @@ def train_test_split(X, y, test_size=0.3, train_size=None, random_state=None):
 def accuracy_score(data1, data2):
     return np.mean(np.array(data1) == np.array(data2))
 
+def get_save_path():
+    dir_name = os.path.basename(os.getcwd())
+    if dir_name == "EmotionalAI":
+        return "Saved_Model/"
+    else:
+        return "../Saved_Model/"
 
 def save_model(model, model_path):
-    if not os.path.exists("Saved_Model/"):
-        os.makedirs('Saved_Model/')
+    save_path = get_save_path()
+    if not os.path.exists(save_path):
+        os.makedirs(save_path)
     with open(model_path, 'wb') as file:
         pickle.dump(model, file)
 
